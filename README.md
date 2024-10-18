@@ -33,8 +33,8 @@ Once the contract is deployed, you can interact with it by calling the sayHello 
 
 ## Authors
 
-Metacrafter Chris  
-[@metacraftersio](https://twitter.com/metacraftersio)
+Angelo M. Bicomong  
+[xerayx](https://github.com/xer4yx)
 
 
 ## License
