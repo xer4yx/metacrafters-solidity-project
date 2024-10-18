@@ -1,40 +1,45 @@
-# metacrafetrs-solidity-project
-
-This Solidity program is a simple "Hello World" program that demonstrates the basic syntax and functionality of the Solidity programming language. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to get a feel for how it works.
-
+# metacrafters-solidity-project: TokenGenerator
 ## Description
 
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a single function that returns the string "Hello World!". This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
+`TokenGenerator` is a simple Solidity smart contract that allows users to mint and burn custom tokens. The contract defines a token named **NITROFOX** (NFX) with functionality for tracking balances, minting new tokens, and burning existing tokens. 
+
+### Key Features:
+1. **Public Variables**:
+   - `TOKEN_NAME`: Holds the name of the token.
+   - `TOKEN_ABBREVIATION`: Short form for the token name.
+   - `totalSupply`: Tracks the total supply of the token.
+
+2. **Mapping**:
+   - A mapping from addresses to balances to track each user's token holdings.
+
+3. **Minting**:
+   - The `mint` function allows the creation of new tokens, increasing the total supply and the balance of the specified address.
+
+4. **Burning**:
+   - The `burn` function allows the destruction of tokens, decreasing the total supply and the balance of the specified address. It ensures the balance of the sender is sufficient before burning.
 
 ## Getting Started
 
-### Executing program
+To get started with this contract, you will need the following:
+- **Solidity Compiler**: Version ^0.8.26 or above.
+- **Remix IDE**: An online Solidity development environment.
 
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+## Executing Program
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
+You can execute the program by following these steps:
 
-```javascript
-pragma solidity ^0.8.4;
+1. Visit [Remix Ethereum IDE](https://remix.ethereum.org).
+2. Create a new Solidity file (e.g., `TokenGenerator.sol`).
+3. Copy and paste the Solidity code from this repository into the new file.
+4. Compile the contract using the Solidity compiler version ^0.8.26.
+5. Deploy the contract using the provided `Deploy & Run Transactions` tab.
+6. Once deployed, you can interact with the contract by:
+   - Calling the `mint` function to mint new tokens.
+   - Calling the `burn` function to burn existing tokens.
 
-contract HelloWorld {
-    function sayHello() public pure returns (string memory) {
-        return "Hello World!";
-    }
-}
+## Author
 
-```
-
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile HelloWorld.sol" button.
-
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "HelloWorld" contract from the dropdown menu, and then click on the "Deploy" button.
-
-Once the contract is deployed, you can interact with it by calling the sayHello function. Click on the "HelloWorld" contract in the left-hand sidebar, and then click on the "sayHello" function. Finally, click on the "transact" button to execute the function and retrieve the "Hello World!" message.
-
-## Authors
-
-Angelo M. Bicomong  
-[xerayx](https://github.com/xer4yx)
+[Angelo M. Bicomong](https://github.com/xer4yx)
 
 
 ## License
